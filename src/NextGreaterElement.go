@@ -41,3 +41,6 @@ func main() {
 	 fmt.Println(nextGreaterElement(num1,num2))
 }
 
+
+
+//   https://leetcode.com/problems/next-greater-element-i/submissions/

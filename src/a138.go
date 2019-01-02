@@ -1,21 +1,32 @@
-package main 
-import "fmt"
-import "strconv"
+package main
 
-func countAndSay(n int) string {
+import (
+	"fmt"
+	"strconv"
+)
 
-	s:= strconv.Itoa(n)	
-	return s
+func countAndsay(s string) (r string) {
+	c := s[0]
+	nc := 1
+	for i := 1; i < len(s); i++ {
+		d := s[i]
+		if d == c {
+			nc++
+			fmt.Println(nc)
+			continue
+		}
+		r += strconv.Itoa(nc) + string(c)
+		c = d
+		nc = 1
+	}
+	return r + strconv.Itoa(nc) + string(c)
 }
-// func nhap_vao(i string ) int {
-// 	i := strconv.Atoi("1") return 
-// }
+
 func main() {
-	// s:= strconv.Itoa(12)
-	// fmt.Println(s)
-	// fmt.Printf("%T",s)
-	// var a,b,c,d,e int
-	// a,b,c,d,e =  1,11,21,1211,111221
-	a:=1211
-	fmt.Println(countAndSay(a))
+	s := "1"
+	fmt.Println(s)
+	for i := 0; i < 8; i++ {
+		s = countAndsay(s)
+		fmt.Println(s)
+	}
 }
