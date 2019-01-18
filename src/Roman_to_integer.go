@@ -1,5 +1,5 @@
+package main
 
-package main 
 import "fmt"
 
 func romanToInt(s string) int {
@@ -20,7 +20,7 @@ func romanToInt(s string) int {
 
 		sign := 1
 		if temp < last {
-			
+
 			sign = -1
 		}
 
@@ -35,13 +35,7 @@ func main() {
 	fmt.Println(romanToInt("XXX"))
 }
 
-
 //     https://leetcode.com/problems/roman-to-integer/submissions/
-
-
-
-
-
 
 // var m = map[string]int{"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
 
@@ -64,23 +58,10 @@ func main() {
 // }
 // func main() {
 
-
 // 	fmt.Println(romanToInt("IV"))
 // }
 
 // kieu nay nhanh hon
-
-
-
-
-
-
-
-
-
-
-
-
 
 // package main
 
