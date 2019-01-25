@@ -8,6 +8,7 @@ package main
 
 import "fmt"
 
+// Use 'camel case' change name Square to 'square'
 func Square(a1, a2 []int) int {
 	x := a2[0] - a1[0]
 	y := a2[1] - a1[1]

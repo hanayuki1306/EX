@@ -7,21 +7,22 @@ import (
 )
 
 func fizzBuzz(n int) []string {
-	var res []string
+	var result []string
 	for i := 1; i <= n; i++ {
 		switch {
+		// @TODO Should tab in front of 'case' and have space 'i%15' => 'i % 15'
 		case i%15 == 0:
-			res = append(res, "FizzBuzz")
+			result = append(result, "FizzBuzz")
 		case i%3 == 0:
-			res = append(res, "Fizz")
+			result = append(result, "Fizz")
 		case i%5 == 0:
-			res = append(res, "Buzz")
+			result = append(result, "Buzz")
 		default:
 			num := strconv.Itoa(i)
-			res = append(res, num)
+			result = append(result, num)
 		}
 	}
-	return res
+	return result
 }
 func main() {
 	n := 14

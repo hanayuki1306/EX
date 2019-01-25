@@ -23,39 +23,41 @@
 // }
 // Time Limit Exceeded
 
-// package main
+package main
 
-// import (
-// 	"fmt"
-// )
+import (
+	"fmt"
+)
 
-// func min(a []int) int {
-// 	for i := 0; i < len(a); i++ {
-// 		if a[i] > a[i+1] {
-// 			temp := a[i]
-// 			a[i] = a[i+1]
-// 			a[i+1] = temp
+func min(a []int) int {
+	for i := 0; i < len(a); i++ {
+		if a[i] > a[i+1] {
+			temp := a[i]
+			a[i] = a[i+1]
+			a[i+1] = temp
 
-// 		}
+		}
 
-// 		return a[0]
-// 	}
-// }
-// func find132pattern(nums []int) bool {
-// 	var min_i int
+		return a[0]
+	// }
+}
+func find132pattern(nums []int) bool {
+	var min_i int
 
-// 	for j := 0; j < len(nums)-1; j++ {
-// 		min_i = min(min_i, nums[j])
-// 	}
-// 	for k := j + 1; k < len(nums); k++ {
-// 		if nums[k] < nums[j] && min_i < nums[k] {
-// 			return true
-// 		}
-// 	}
-// 	return false
-// }
-// func main() {
-// 	nums := []int{1, 2, 3, 4, 55, 6}
-// 	fmt.Println(find132pattern(nums))
-// 	//true
-// }
+	// Change j to another
+	for j := 0; j < len(nums)-1; j++ {
+		min_i = min(min_i, nums[j])
+	}
+	for k := j + 1; k < len(nums); k++ {
+		if nums[k] < nums[j] && min_i < nums[k] {
+			return true
+		}
+	}
+
+	return false
+}
+func main() {
+	nums := []int{1, 2, 3, 4, 55, 6}
+	fmt.Println(find132pattern(nums))
+	//true
+}

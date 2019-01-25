@@ -5,16 +5,21 @@ func isMonotonic(A []int) bool {
         return true
     }
     increase := true
-    decrease := true
+	decrease := true
+	// @TODO: Wite description why use
     for i := 0; i < len(A) - 1; i++ {        //i++ A[i] >A[i+1]
         if A[i] > A[i + 1] {
             decrease = false
         } else if A[i] < A[i + 1] {
             increase = false
-        }
-        if (increase || decrease) == false {
+		}
+		// Can use with AND operator
+		if (increase == false && decrease == false) {
             return false
-        } 
+        }
+        // if !(increase || decrease) {
+        //     return false
+        // } 
     }
     return true
 }

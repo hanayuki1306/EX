@@ -18,11 +18,12 @@ import "fmt"
 
 func addStrings(num1 string, num2 string) string {
 	st1, st2 := []byte(num1), []byte(num2)
+	sum := byte(0)
 
 	if len(st1) < len(st2) {
 		st1, st2 = st2, st1
 	}
-	sum := byte(0)
+	// @TODO indexOfSt1 instead of i, .....
 	for i, j := len(st1)-1, len(st2)-1; i >= 0 || j >= 0; i, sum = i-1, sum/10 { // for i>=0 j:=len s1||for j>=0 j= len s2-1
 		if j >= 0 {
 			sum += st2[j] - '0'
@@ -38,6 +39,7 @@ func addStrings(num1 string, num2 string) string {
 	return string(st1)
 }
 func main() {
+	// @TODO change a and b
 	a := "987"
 	b := "0"
 	fmt.Println(addStrings(a, b))

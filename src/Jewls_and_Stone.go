@@ -1,23 +1,28 @@
-package main 
+package main
+
 import "fmt"
+
 func numJewelsInStones(J string, S string) int {
 	var counter = 0
-	for i:=0; i<len(S); i++{
-		for j:=0; j<len(J); j++{
-			if S[i] == J[j] { fmt.Println(S[i])
-				 counter++
+
+	// change i to indexS
+	//  change j to injexJ
+	for i := 0; i < len(S); i++ {
+		for j := 0; j < len(J); j++ {
+			if S[i] == J[j] {
+				fmt.Println(S[i])
+				counter++
 				//  fmt.Println(counter)
 			}
 		}
 	}
 	return counter
-} 
+}
 func main() {
-	var J,S string 
+	var J, S string
 	J = "aAC"
 	S = "aAAbbbbCC"
-   fmt.Println(numJewelsInStones(J,S))
+	fmt.Println(numJewelsInStones(J, S))
 }
-
 
 // Jewls and stones

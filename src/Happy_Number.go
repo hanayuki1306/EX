@@ -6,22 +6,6 @@ import (
 	"math"
 )
 
-func isHappy(n int) bool {
-	if n <= 0 {
-		return false
-	}
-	if n == 1 {
-		return true
-	}
-	for n != 1 {
-		n = sub(n)
-		if n == 4 {
-			return false
-		}
-	}
-	return true
-}
-
 func sub(n int) int {
 	str := fmt.Sprintf("%d", n)
 	fmt.Println(str)
@@ -32,6 +16,23 @@ func sub(n int) int {
 	}
 	return ret
 }
+
+func isHappy(number int) bool {
+	if number <= 0 {
+		return false
+	}
+	if number == 1 {
+		return true
+	}
+	for number != 1 {
+		number = sub(number)
+		if number == 4 {
+			return false
+		}
+	}
+	return true
+}
+
 func main() {
 	fmt.Println(isHappy(82))
 }

@@ -5,7 +5,6 @@ package main
 import "fmt"
 
 func findMaxConsecutiveOnes(nums []int) int {
-
 	count := 0
 	max := 0
 	for _, v := range nums {

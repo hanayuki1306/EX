@@ -13,5 +13,6 @@ func convertToBase7(num int) string {
 	if num < 7 {
 		return strconv.Itoa(num % 7)
 	}
+	// @TODO: space ident such as 'num/7' => 'num / 7'
 	return convertToBase7(num/7) + strconv.Itoa(num%7)
 }

@@ -10,12 +10,15 @@ func beautifulArray(N int) []int {
 	}
 	fmt.Println(A)
 	for i := 0; i < len(A); i++ {
+		//  @TODO: What is k and J
 		var k, j int
 		count := 2
+		// @TODO: What is C
 		C := 1
 		k = i + C
 
 		for j = (i + count); j < len(A); j++ {
+			// @TODO: should make a function for swap
 			if (A[k] * 2) == (A[i] + A[j]) {
 				temp = A[i]
 				A[i] = A[k]
@@ -39,6 +42,7 @@ func beautifulArray(N int) []int {
 	}
 	return A
 }
+
 func main() {
 	fmt.Println(beautifulArray(5))
 }

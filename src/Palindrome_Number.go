@@ -3,7 +3,6 @@ https://leetcode.com/problems/palindrome-number/
 
 
 func isPalindrome(x int) bool {
-
 	B:= strconv.Itoa(x)
 	n:=len(B)
 	for i:=0;i<len(B);i++ {

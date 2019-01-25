@@ -3,12 +3,12 @@ https://leetcode.com/problems/missing-number/
 
 
 func missingNumber(nums []int) int {
-    A := len(nums)
+    lengOfNums := len(nums)
     var B int
-    for i:=0 ; i< A;i++{
+    for i:=0 ; i < lengOfNums; i++{
         B = B ^ i ^ nums[i]
     }
-    return B^A
+    return B ^ lengOfNums
 }
 
 

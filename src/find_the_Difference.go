@@ -4,14 +4,16 @@ import "fmt"
 
 func findTheDifference(s string, t string) byte {
 	var key byte
+	// @TODO: change i to index
 	for i := 0; i < len(s); i++ {
 		key ^= s[i]
 		// key = s[i]+ key1
 		fmt.Println("key loop1 = ", s[i])
 	}
 
-	for j := 0; j < len(t); j++ {
-		key ^= t[j]
+	// @TODO: change i to index
+	for i := 0; i < len(t); i++ {
+		key ^= t[i]
 	}
 	// fmt.Println("key loop2 =", key)
 	return key

@@ -19,22 +19,24 @@ import "fmt"
 // }
 
 func findMaxAverage(nums []int, k int) float64 {
-	ans := 0
+	result := 0
+	// @TODO: result will become ...
 	for i := 0; i < k; i++ {
-		ans += nums[i]
+		result += nums[i]
 	}
 
 	for i := k; i < len(nums); i++ {
-		ansTmp := 0
+		resultTmp := 0
 
 		for j := i; j > i-k; j-- {
-			ansTmp += nums[j]
+			resultTmp += nums[j]
 		}
-		if ansTmp > ans {
-			ans = ansTmp
+		if resultTmp > result {
+			result = resultTmp
 		}
 	}
-	return float64(ans) / float64(k)
+
+	return float64(result) / float64(k)
 }
 
 func main() {

@@ -5,23 +5,25 @@ package main
 import "fmt"
 
 func longestPalindrome(s string) int {
+
+	// @TODO: m should named meanful
 	m := make(map[rune]int)
 	for _, u := range s {
 		m[u]++
 	}
-	var ketqua int
+	var result int
 	var odd bool
 	for _, v := range m {
-		ketqua += v
+		result += v
 		if v%2 == 1 {
-			ketqua--
+			result--
 			odd = true
 		}
 	}
 	if odd {
-		ketqua++
+		result++
 	}
-	return ketqua
+	return result
 }
 func main() {
 	a := "aabbccdd"

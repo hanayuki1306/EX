@@ -4,6 +4,7 @@ package main
 
 import "fmt"
 
+// @TODO: Change the name 'ans' to 'isOneBitCharacter'
 func ans(bits []int) bool {
 	if len(bits) == 0 || bits[len(bits)-1] == 1 {
 		return false
@@ -27,6 +28,7 @@ func ans(bits []int) bool {
 }
 
 func main() {
+	// @TODO: Should change 'a' to 'sampleArray'
 	a := []int{1, 0, 1, 0, 0, 0, 1, 0, 0}
 	fmt.Println(ans(a))
 }
